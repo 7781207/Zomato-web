@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: azure;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+}
+.navbar__brand{
+    width:100px;
+}
+.navbar__logo{
+    width:100%;
+}
+.nav__item{
+    background-image: linear-gradient(
+        to right,
+        red 0%,
+        rgb(183, 49, 62) 51%,
+        darkred 100%
+    );
+    color: white;
+    border:none;
+    padding:12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.nav__item:hover{
+    border:2px solid pink;
+}
+@media(min-width:768px){
+    .navbar{
+        justify-content: space-between;
+        padding:6px;
+    }
+}
+@media(min-width:1020px){
+    .navbar__brand{
+        width:150px;
+    }
+
+}
