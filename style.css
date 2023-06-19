@@ -6,12 +6,31 @@
 body{
     background-color: azure;
 }
+.container{
+    width:100%;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
+.button_primary{
+    background-image: linear-gradient(
+        to right,
+        red 0%,
+        rgb(183, 49, 62) 51%,
+        darkred 100%
+    );
+    color: white;
+    border:none;
+    padding:12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: white;
 }
+
 .navbar__brand{
     width:100px;
 }
@@ -34,15 +53,111 @@ body{
 .nav__item:hover{
     border:2px solid pink;
 }
+.hero__imagecontainer{
+    width:100%;
+}
+.hero__image{
+    width:100%;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px 12px rgba(0,0,0,0.25);
+}
+.hero_des{
+    font-size: 20px;
+    margin:20px 0px;
+}
+.food__card{
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.food_cardimage{
+    width:100%;
+    height:100%;
+    
+}
+.food_image{
+    height:100%;
+    width:100%;
+    border-radius: 8px 8px 0 0;
+}
+.food_carddes{
+    padding:15px;
+}
+.explore__menutext{
+    font-size: 30px;
+    margin-top: 50px;
+    margin-top: 30px;
+    text-align: center;
+}
 @media(min-width:768px){
     .navbar{
         justify-content: space-between;
         padding:6px;
     }
+    .hero__container{
+
+        display:flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top:20px;
+    }
+    .explore__menulists{
+        display: flex;
+        gap:10px;
+        margin-top: 40px;
+        margin-left: 80px;
+        text-align:center ;
+        
+    }
+    .view__more{
+        align-items: center;
+    }
+    .food__card{
+        height:100%;
+    }
+    #Pizza__card{
+        margin-top: -10px;
+        margin-bottom: 30px;
+    }
+    .explore__menucontainer{
+        position: relative;
+        margin-top:50px;
+        text-align: center;
+    }
+    .expore__menu__bg{
+        position: absolute;
+        top:0px;
+        left:0;
+        width:100%;
+        height:100%;
+        background-image: linear-gradient(
+        to right,
+        red 0%,
+        rgb(183, 49, 62) 51%,
+        darkred 100%
+    );
+    transform: skewY(-5deg );
+    z-index: -3;
+
+    }
 }
 @media(min-width:1020px){
+    .container{
+        max-width: 900px;
+    }
     .navbar__brand{
         width:150px;
     }
+    .hero__description{
+        width:100%;
+    }
+    .hero_des{
+        font-size: 50px;
+    }
 
+}
+@media(min-width:1400px){
+    .container{
+        max-width: 1250px;
+    }
 }
